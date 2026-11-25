@@ -1,0 +1,293 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef0f7;
+    color: #333;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 0;
+}
+
+/* CABEÇALHO */
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    background: #303030;
+    width: 33px;
+    height: 33px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.titulo h2 {
+    font-size: 17px;
+    margin-bottom: 3px;
+}
+
+.titulo p {
+    font-size: 11px;
+    color: #333333;
+}
+
+/* PESQUISA */
+
+.pesquisa {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.pesquisa select {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    background: white;
+    font-size: 13px;
+}
+
+.pesquisa button {
+    background: #483DAD;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 17px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* CIDADES */
+
+.cidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 15px;
+}
+
+.cidades span {
+    background: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    color: #555;
+    cursor: pointer;
+}
+
+/* CLIMA ATUAL */
+
+.clima-atual {
+    background: #303030;
+    color: white;
+    border-radius: 13px;
+    padding: 18px;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px #00000015;
+}
+
+.cidade-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.cidade-info h2 {
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+
+.cidade-info p {
+    font-size: 11px;
+    color: #bbb;
+}
+
+.cidade-info small {
+    font-size: 9px;
+    color: #aaa;
+}
+
+.clima-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.temperatura {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icone-chuva {
+    font-size: 40px;
+}
+
+.temperatura h1 {
+    font-size: 34px;
+}
+
+.temperatura p {
+    font-size: 11px;
+    color: #ccc;
+    margin-top: 3px;
+}
+
+/* INFORMAÇÕES DO CLIMA */
+
+.informacoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px;
+    width: 58%;
+}
+
+.info {
+    background: #414141;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    font-size: 10px;
+}
+
+.info span {
+    color: #ccc;
+}
+
+.info strong {
+    font-size: 10px;
+}
+
+/* PREVISÃO */
+
+.previsao {
+    background: white;
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 5px 15px #00000010;
+}
+
+.previsao h3 {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.dias {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.dia {
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    text-align: center;
+    padding: 12px 5px;
+}
+
+.dia h4 {
+    font-size: 11px;
+    margin-bottom: 4px;
+}
+
+.dia > small {
+    color: #888;
+    font-size: 9px;
+}
+
+.icone {
+    font-size: 22px;
+    margin: 10px 0 5px;
+}
+
+.dia p {
+    font-size: 9px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.dia strong {
+    font-size: 11px;
+}
+
+.dia strong span {
+    color: #888;
+    margin-left: 5px;
+}
+
+.dia .chuva {
+    display: block;
+    color: #493bb5;
+    font-weight: bold;
+    margin-top: 7px;
+}
+
+/* RODAPÉ */
+
+footer {
+    text-align: center;
+    color: #888;
+    font-size: 10px;
+    margin: 30px 0 15px;
+}
+
+footer a {
+    color: #493bb5;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 650px) {
+
+    .clima-conteudo {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .temperatura {
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .informacoes {
+        width: 100%;
+    }
+
+    .dias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (min-width: 651px) and (max-width: 850px) {
+
+    .dias {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
